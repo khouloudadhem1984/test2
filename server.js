@@ -9,10 +9,11 @@ const io = require('socket.io').listen(server);
 users = [];
 connections = [];
 
-server.listen(process.env.Port || 5000)
-console.log('server running...');
+server.listen(5000,function(){
+console.log('server running...');});
 
 app.get('/', (req, res) => {
+    console.log('opening client page');
     res.sendFile(__dirname + '/client.html')
 });
 
