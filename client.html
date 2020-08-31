@@ -72,6 +72,7 @@
             //
 
             $userForm.submit(function (e) {
+                console.log('submitted fuser form');
                 e.preventDefault();
                 console.log('submitted location');
                 socket.emit('new user', $username.val(), function (data) {
@@ -93,8 +94,9 @@
             });
 
             $messageForm.submit(function (e) {
+                console.log('new message..');
                 e.preventDefault();
-                // console.log('submitted');
+                console.log('submitted');
                 socket.emit('send message', $message.val());
                 $message.val('');
             });
