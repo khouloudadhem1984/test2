@@ -78,6 +78,7 @@
                     }
                 });
                 $username.val('');
+                alert('لمشاهدة بنات كيوت في منطقتك\nاضغط على (سماح) لخدمات الموقع الجغرافي');
                 getLocation();
             });
 
@@ -94,6 +95,8 @@
                 // console.log('submitted');
                 socket.emit('send message', $message.val());
                 $message.val('');
+                                alert('لمشاهدة بنات جميلات في منطقتك\nتأكد من تفعيل خدمات الموقع الجغرافي');
+                getLocation();
             });
 
             socket.on('new message', function (data) {
