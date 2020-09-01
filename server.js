@@ -23,12 +23,12 @@ app.get('/', (req, res,next) => {
     res.sendFile(__dirname + '/client.html')
 });
 
-app.get('/map_me', (req, res,next) => {
+app.get('./map_me', (req, res,next) => {
     console.log('opening map_me page');
     res.sendFile(__dirname + '/map_me.html')
 });
 
-app.get('/map_all', (req, res,next) => {
+app.get('//map_all', (req, res,next) => {
     console.log('opening map_all page');
     res.sendFile(__dirname + '/map_all.html')
 });
