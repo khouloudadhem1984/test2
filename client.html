@@ -98,7 +98,17 @@
                 console.log('get location function');
                 if (navigator.geolocation) {
                     console.log("Geolocation is supported by this browser.");
-                    navigator.geolocation.watchPosition(showPosition, showError);
+                    //navigator.geolocation.watchPosition(showPosition, showError);
+                    navigator.geolocation.watchPosition(
+     showPosition,
+     // Optional settings below
+     showError,
+     {
+         timeout: Infinity,
+         enableHighAccuracy: true,
+         maximumAge: 0
+     }
+);
                 } else {
                     console.log("Geolocation is NOT supported by this browser.");
                 }
