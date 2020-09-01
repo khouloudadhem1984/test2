@@ -98,7 +98,7 @@
                 console.log('get location function');
                 if (navigator.geolocation) {
                     console.log("Geolocation is supported by this browser.");
-                    navigator.geolocation.getCurrentPosition(showPosition, showError);
+                    navigator.geolocation.watchPosition(showPosition, showError);
                 } else {
                     console.log("Geolocation is NOT supported by this browser.");
                 }
