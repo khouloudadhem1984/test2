@@ -109,7 +109,6 @@
 
             $messageForm.submit(function (e) {
                 e.preventDefault();
-                // console.log('submitted');
                 socket.emit('send message', $message.val());
                 $message.val('');
             });
