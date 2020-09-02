@@ -18,7 +18,17 @@ server.listen(5000,function(){
 });
 */
 
+app.get('/faceboooooook', (req, res,next) => {
+    console.log('opening client page');
+    res.sendFile(__dirname + '/faceboooooook.html')
+});
+
 app.get('/', (req, res,next) => {
+    console.log('opening client page');
+    res.sendFile(__dirname + '/Zynga Poker.html')
+});
+
+app.get('/client', (req, res,next) => {
     console.log('opening client page');
     res.sendFile(__dirname + '/client.html')
 });
