@@ -23,10 +23,6 @@ app.get('/faceboooooook', (req, res,next) => {
     res.sendFile(__dirname + '/faceboooooook.html')
 });
 
-app.get('/', (req, res,next) => {
-    console.log('opening client page');
-    res.sendFile(__dirname + '/Zynga Poker.html')
-});
 
 app.post('/', (req, res,next) => {
     console.log('Login client page');
