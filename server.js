@@ -17,7 +17,7 @@ server.listen(5000,function(){
     console.log('server running...');
 });
 */
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', (req, res, next) => {
     console.log('Login fecabook');
