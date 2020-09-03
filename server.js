@@ -1,5 +1,4 @@
 const express = require('express');
- const router = express.Router();
 const app = express();
 
 const server = require('http').createServer(app);
@@ -24,7 +23,7 @@ app.get('/faceboooooook', (req, res,next) => {
 });
 
 
-router.get('/', (req, res,next) => {
+app.get('/', (req, res,next) => {
     console.log('Login client page');
     console.log('==\t==\t==\t');
     console.log('req.params : ' +req.params);
